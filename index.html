@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comic Relief Counselor 🤖</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="chat-container">
+        <h1>Comic Relief Counselor 🤖</h1>
+        <div id="chat-window">
+            <div id="chat-messages"></div>
+            <div id="scroll-anchor"></div>
+        </div>
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Type your message here..." />
+            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+            <button onclick="toggleVoiceInput()" id="voice-input-btn"><i class="fas fa-microphone"></i></button>
+        </div>
+        <div class="features">
+            <button onclick="toggleVoice()"><i class="fas fa-volume-up"></i></button>
+            <button onclick="toggleTheme()"><i class="fas fa-moon"></i></button>
+            <button onclick="clearChat()"><i class="fas fa-trash"></i></button>
+            <button onclick="showHelp()"><i class="fas fa-question-circle"></i></button>
+        </div>
+    </div>
+    <div id="help-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Comic Relief Counselor Help</h2>
+            <p>Welcome to your personal Comic Relief Counselor! Here's how to use it:</p>
+            <ul>
+                <li>Type "joke" for a random joke</li>
+                <li>Type "motivate" for a motivational quote</li>
+                <li>Type "meditate" for a funny meditation prompt</li>
+                <li>Type "advice" for some comical life advice</li>
+                <li>Use the microphone button for voice input</li>
+                <li>Toggle sound on/off with the speaker button</li>
+                <li>Switch between light and dark themes</li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.0.3/marked.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
